@@ -14,15 +14,15 @@ before every table name moving forward. */
 
 create table students (
 	student_id int, 
-    first_name varchar(25), 
-    last_name varchar(25), 
-    age tinyint, 
-    gender char, 
-    major varchar(25), 
-    gpa float(2,1), 
-    city varchar(25), 
-    country varchar(25)
-    );
+	first_name varchar(25), 
+	last_name varchar(25), 
+	age tinyint, 
+	gender char, 
+	major varchar(25), 
+	gpa float(2,1), 
+	city varchar(25), 
+	country varchar(25)
+	);
 -- When creating a table, you must name the columns and specify the data types at least
 
 -- 3. Add records to the students table.
@@ -91,7 +91,7 @@ massive tables, but this is a small one. */
 -- 5. Select the first and last names of all female students.
 select
 	first_name,
-    last_name
+	last_name
 from students
 where gender = 'F';
 
@@ -147,7 +147,7 @@ select *
 from students
 where
 	last_name like '%u'
-    and length(last_name) = 6;
+    	and length(last_name) = 6;
 
 -- 15. Update the GPA of students whose first name starts with 'A' to 3.9
 set sql_safe_updates = 0;
@@ -191,16 +191,16 @@ records to our new table. */
 
 create table high_gpa_students (
 	student_id int, 
-    first_name varchar(25), 
-    last_name varchar(25), 
-    age tinyint, 
-    gender char, 
-    major varchar(25), 
-    gpa float(2,1), 
-    city varchar(25), 
-    country varchar(25)
-    );
-    
+	first_name varchar(25), 
+	last_name varchar(25), 
+	age tinyint, 
+	gender char, 
+	major varchar(25), 
+	gpa float(2,1), 
+	city varchar(25), 
+	country varchar(25)
+	);
+
 insert into high_gpa_students
 	(student_id, first_name, last_name, age, gender, major, gpa, city, country)
 select *
